@@ -67,7 +67,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="main-nav d-none" id="all_nav">
+	<div class="main-nav <?php if($this->uri->segment(1) == ''){ echo 'd-none';}?>" id="all_nav">
 		<div class="container-fluid">
 			<div class="row align-items-center" id="unscrolled" >
 				<div class="col-auto">
@@ -214,133 +214,253 @@
 	</div>
 </div>
 <script>
-var map;
-$(document).ready(function(){
-	var $deliveryVerification = $('#navigation-order');
-	var $toggleVerification = $('.toggle-verification');
-	var $quickBox = $('#quick-box');
-	var $navUnscroll = $('#unscrolled');
-	var $navScroll = $('#scrolled');
-	var $widget = $('#widget');
-	var $widgetOpen = $('#widget-open');
-	var $widgetClose = $('#widget-close');
-	var $widgetToggleClose = $('.widget-toggle-close');
-	var $widgetToggleOpen = $('.widget-toggle-open');
-	var $allNav = $('#all_nav');
+<?php if($this->uri->segment(1) == ""){?>
+	var map;
+	$(document).ready(function(){
+		var $deliveryVerification = $('#navigation-order');
+		var $toggleVerification = $('.toggle-verification');
+		var $quickBox = $('#quick-box');
+		var $navUnscroll = $('#unscrolled');
+		var $navScroll = $('#scrolled');
+		var $widget = $('#widget');
+		var $widgetOpen = $('#widget-open');
+		var $widgetClose = $('#widget-close');
+		var $widgetToggleClose = $('.widget-toggle-close');
+		var $widgetToggleOpen = $('.widget-toggle-open');
+		var $allNav = $('#all_nav');
 
 
 
-	$(window).scroll(menu);
-	$(window).scroll(show_nav);
-	$toggleVerification.click(toggleVerification);
-	$widgetToggleOpen.click(widgetOpen);
-	$widgetToggleClose.click(widgetClose);
+		$(window).scroll(menu);
+		$(window).scroll(show_nav);
+		$toggleVerification.click(toggleVerification);
+		$widgetToggleOpen.click(widgetOpen);
+		$widgetToggleClose.click(widgetClose);
 
 
-	function toggleVerification(){
-		$deliveryVerification.stop().slideToggle();
-		return false;
-	}
+		function toggleVerification(){
+			$deliveryVerification.stop().slideToggle();
+			return false;
+		}
 
-	function widgetClose(){
-		$widgetOpen.fadeOut(200, function(){
-			$widgetClose
-			.stop()
-			.fadeIn();
-
-			$widget
-			.css({
-		        'margin-top' : -$widget.outerHeight()/2
-		    });
-		});
-		return false;
-	}
-
-	function widgetOpen(){
-		$widgetClose.fadeOut(200, function(){
-			$widgetOpen
-			.stop()
-			.fadeIn();
-
-			$widget
-			.css({
-		        'margin-top' : -$widget.outerHeight()/2
-		    });
-		});
-		return false;
-	}
-
-	function menu(){
-		var top = $(window).scrollTop(),
-			width = $(window).width();
-
-		if ( top > 700 ){
-			if ( $navUnscroll.hasClass('d-none') == false ){
-				$navUnscroll
-				.addClass('d-none');
-
-			}
-
-			if ( $navScroll.hasClass('d-none') == true ){
-				$navScroll
-				.removeClass('d-none');
-			}
-
-			if ( $widget.hasClass('hidden') == true ){
-				$widget
-				.removeClass('hidden')
+		function widgetClose(){
+			$widgetOpen.fadeOut(200, function(){
+				$widgetClose
 				.stop()
-				.fadeIn()
+				.fadeIn();
+
+				$widget
 				.css({
 			        'margin-top' : -$widget.outerHeight()/2
 			    });
-			}
+			});
+			return false;
 		}
-		else{
-			if ( $navUnscroll.hasClass('d-none') == true ){
-				$navUnscroll
-				.removeClass('d-none');
 
-			}
-
-			if ( $navScroll.hasClass('d-none') == false ){
-				$navScroll
-				.addClass('d-none');
-			}
-
-			if ( $widget.hasClass('hidden') == false ){
-				$widget
-				.addClass('hidden')
+		function widgetOpen(){
+			$widgetClose.fadeOut(200, function(){
+				$widgetOpen
 				.stop()
-				.fadeOut();
+				.fadeIn();
+
+				$widget
+				.css({
+			        'margin-top' : -$widget.outerHeight()/2
+			    });
+			});
+			return false;
+		}
+
+		function menu(){
+			var top = $(window).scrollTop(),
+				width = $(window).width();
+
+			if ( top > 700 ){
+				if ( $navUnscroll.hasClass('d-none') == false ){
+					$navUnscroll
+					.addClass('d-none');
+
+				}
+
+				if ( $navScroll.hasClass('d-none') == true ){
+					$navScroll
+					.removeClass('d-none');
+				}
+
+				if ( $widget.hasClass('hidden') == true ){
+					$widget
+					.removeClass('hidden')
+					.stop()
+					.fadeIn()
+					.css({
+				        'margin-top' : -$widget.outerHeight()/2
+				    });
+				}
+			}
+			else{
+				if ( $navUnscroll.hasClass('d-none') == true ){
+					$navUnscroll
+					.removeClass('d-none');
+
+				}
+
+				if ( $navScroll.hasClass('d-none') == false ){
+					$navScroll
+					.addClass('d-none');
+				}
+
+				if ( $widget.hasClass('hidden') == false ){
+					$widget
+					.addClass('hidden')
+					.stop()
+					.fadeOut();
+				}
 			}
 		}
-	}
-	function show_nav(){
-		var top = $(window).scrollTop(),
-			width = $(window).width();
-		if ( top > 600 ){
-			$allNav.removeClass('d-none');
+		function show_nav(){
+			var top = $(window).scrollTop(),
+				width = $(window).width();
+			if ( top > 600 ){
+				$allNav.removeClass('d-none');
 
-		}else{
-			$allNav.addClass('d-none');
+			}else{
+				$allNav.addClass('d-none');
 
+			}
 		}
-	}
-	show_nav();
-	menu();
+		show_nav();
+		menu();
 
-	$('#more_review').click(function(){
-		if($('.home-comments').height() <= 380){
-			$('.home-comments').css('height', 'auto');
-			$("#more_review").text("MINIMIZE REVIEWS");
+		$('#more_review').click(function(){
+			if($('.home-comments').height() <= 380){
+				$('.home-comments').css('height', 'auto');
+				$("#more_review").text("MINIMIZE REVIEWS");
+			}
+			else{
+				$('.home-comments').css('height', '380');
+				$("#more_review").text("LOAD MORE REVIEWS");
+			}
+
+		});
+	});
+<?php }
+else if($this->uri->segment(1) == "promos" || $this->uri->segment(1) == "events" || $this->uri->segment(1) == "order"){ ?>
+	var map;
+	$(document).ready(function(){
+		var $deliveryVerification = $('#navigation-order');
+		var $toggleVerification = $('.toggle-verification');
+		var $quickBox = $('#quick-box');
+		var $navUnscroll = $('#unscrolled');
+		var $navScroll = $('#scrolled');
+		var $widget = $('#widget');
+		var $widgetOpen = $('#widget-open');
+		var $widgetClose = $('#widget-close');
+		var $widgetToggleClose = $('.widget-toggle-close');
+		var $widgetToggleOpen = $('.widget-toggle-open');
+
+
+
+		$(window).scroll(menu);
+		$toggleVerification.click(toggleVerification);
+		$widgetToggleOpen.click(widgetOpen);
+		$widgetToggleClose.click(widgetClose);
+
+
+		function toggleVerification(){
+			$deliveryVerification.stop().slideToggle();
+			return false;
 		}
-		else{
-			$('.home-comments').css('height', '380');
-			$("#more_review").text("LOAD MORE REVIEWS");
+
+		function widgetClose(){
+			$widgetOpen.fadeOut(200, function(){
+				$widgetClose
+				.stop()
+				.fadeIn();
+
+				$widget
+				.css({
+			        'margin-top' : -$widget.outerHeight()/2
+			    });
+			});
+			return false;
 		}
+
+		function widgetOpen(){
+			$widgetClose.fadeOut(200, function(){
+				$widgetOpen
+				.stop()
+				.fadeIn();
+
+				$widget
+				.css({
+			        'margin-top' : -$widget.outerHeight()/2
+			    });
+			});
+			return false;
+		}
+
+		function menu(){
+			var top = $(window).scrollTop(),
+				width = $(window).width();
+
+			if ( top > 100 ){
+				if ( $navUnscroll.hasClass('d-none') == false ){
+					$navUnscroll
+					.addClass('d-none');
+
+
+				}
+
+				if ( $navScroll.hasClass('d-none') == true ){
+					$navScroll
+					.removeClass('d-none');
+				}
+
+				if ( $widget.hasClass('hidden') == true ){
+					$widget
+					.removeClass('hidden')
+					.stop()
+					.fadeIn()
+					.css({
+				        'margin-top' : -$widget.outerHeight()/2
+				    });
+				}
+			}
+			else{
+				if ( $navUnscroll.hasClass('d-none') == true ){
+					$navUnscroll
+					.removeClass('d-none');
+
+				}
+
+				if ( $navScroll.hasClass('d-none') == false ){
+					$navScroll
+					.addClass('d-none');
+				}
+
+				if ( $widget.hasClass('hidden') == false ){
+					$widget
+					.addClass('hidden')
+					.stop()
+					.fadeOut();
+				}
+			}
+		}
+
+		menu();
+
+		$('#more_review').click(function(){
+			if($('.home-comments').height() <= 380){
+				$('.home-comments').css('height', 'auto');
+				$(".home-comments-rev h6").text("MINIMIZE REVIEWS");
+			}
+			else{
+				$('.home-comments').css('height', '380');
+				$(".home-comments-rev h6").text("READ MORE REVIEWS");
+			}
+
+		});
 
 	});
-
-});
+<?php } ?>
 </script>
