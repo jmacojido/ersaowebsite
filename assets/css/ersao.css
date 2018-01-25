@@ -1071,12 +1071,12 @@ h1.heading-12 {
 	height: 450px;
 }
 .home-welcome {
-	height: 610px;
+	height: 600px;
 	margin-top:-60px;
 	background-image: url(/assets/img/home/welcome_logo.png), url(/assets/img/home/welcome_bg.jpg);
 	background-position: center, center;
 	background-position-y: 100px, 0px;
-    background-size: auto, 100% 100%;
+    background-size: auto, auto;
     background-repeat: no-repeat, no-repeat;
 }
 .home-welcome-buttons{
@@ -1116,6 +1116,20 @@ h1.heading-12 {
 		2px 2px 0 #eaeaea,
 		-2px 0px 0 #eaeaea,
 		0px -2px 0 #eaeaea;
+}
+
+.map-box, #map{
+	width: auto !important;
+}
+
+/* .home-welcome {
+    background-size: auto !important;
+} */
+
+@media (max-width: 575px) {
+    .home-welcome-buttons {
+        display: block;
+    }
 }
 
 .bg-home-welcome-line {
