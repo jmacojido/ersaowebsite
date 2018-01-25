@@ -1,0 +1,1 @@
+<script src="<?php echo JS_URL; ?>jquery.selectric.min.js"></script>

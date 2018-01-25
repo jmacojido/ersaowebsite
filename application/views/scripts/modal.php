@@ -1,0 +1,1 @@
+<script src="<?php echo JS_URL ?>animatedModal.min.js"></script>

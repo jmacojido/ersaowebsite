@@ -1,0 +1,129 @@
+$fontSize:14px;
+$fontFamily:'Eras', Arial, Helvetica, sans-serif;
+
+/* COLORS */
+$textBlack:#555;
+$textSpring:#DCE8AA;
+$textSpring2:#E2EDBE;
+$textOlive:#668538;
+$textWhite:#fff;
+
+$dividerBlack:#000;
+$dividerHeight:10px;
+
+
+$bgWhite:#fff;
+$bgOlive:#668538;
+$bgOlive2:#595F42;
+$bgOlive3:#B5BF8B;
+$bgSpring:#DCE8AA;
+$bgSpring2:#9EC23C;
+$bgSpring2Faded:#C6DA83;
+$bgSpring3:#BFCE84;
+$bgBlack:#000;
+$bgRed:#EB1E24;
+$bgRed2:#C92328;
+$bgRed3:#A7171B;
+$bgGray:#777;
+$bgGray2:#4C4C4C;
+$bgGray3:#808080;
+$bgGray4:#ddd;
+$bgGray5:#3C3939;
+$bgGray6:#565656;
+$bgGray7:#D9D9D9;
+$bgGray8:#E9EBED;
+
+$borderOlive:#668538;
+$borderWhite:#fff;
+
+/* GENERAL DIMENSIONS */
+$contentPadding:10px;
+$contentMargin:10px;
+
+$navigation:100px;
+
+$promoDecoyHeight:400px;
+$permalinkHeight:50px;
+
+$carouselHeight:500px;
+$slideHeight:300px;
+$slideEventHeight:500px;
+
+$listItemHeight:300px;
+$listThumbHeight:250px;
+
+
+/* BACKGROUND IMAGES*/
+
+$bgBamboo:url(../img/bamboo_l.jpg), url(../img/bamboo_r.jpg);
+$bgBambooPosition:left center, right center;
+$bgBambooSize: auto 100%, auto 100%;
+$bgBambooRepeat: no-repeat, no-repeat;
+
+
+$bgFood: url(../img/bg_noodle.jpg), url(../img/bg_milk_tea.jpg);
+$bgFoodPosition:left bottom, right bottom;
+$bgFoodSize: auto 400px, auto 400px;
+$bgFoodRepeat: no-repeat, no-repeat;
+
+/* PROMOS */
+
+$bannerHeight:400px;
+
+
+/* EVENTS */
+
+$markerSize:40px;
+
+/* ORDERS */
+
+$categoryListWidth:300px;
+$itemPadding:15px;
+
+@mixin linkReset(){
+	color:$textWhite;
+
+	&:hover{
+		text-decoration:none;
+	}
+}
+
+@mixin fontSize($fontMultiplier, $lineHeightMultiplier:"") {
+	font-size:$fontMultiplier * $fontSize;
+
+	@if $lineHeightMultiplier != ""{
+		line-height: ($fontMultiplier * $fontSize) * $lineHeightMultiplier;
+	}
+}
+
+@mixin borderRadius($value){
+	-webkit-border-radius: $value;
+	border-radius: $value;
+}
+
+@mixin boxShadowBottom($distance){
+	box-shadow: 0 $distance $distance*0.5 $distance*0.5 $bgBlack;
+}
+
+@mixin liner($alignment:middle, $after:0){
+	height: 100%;
+	display: inline-block;
+	vertical-align: $alignment;
+
+	@if $after == 1 {
+		content:'';
+	}
+}
+
+@mixin linee($alignment:middle){
+	display: inline-block;
+	vertical-align: $alignment;
+}
+
+@mixin serif(){
+	font-family:  'Times New Roman', 'Amiri', sans-serif;
+}
+
+@mixin italic(){
+	font-style: italic;
+}

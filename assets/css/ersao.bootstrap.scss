@@ -1,0 +1,256 @@
+.form-control, .custom-select{
+	@include borderRadius(0);
+}
+
+@include media-breakpoint-up(xl){
+	.container{
+		max-width:1110px;
+	}
+}
+
+
+
+a:hover{
+	text-decoration:none;
+}
+
+.btn{
+	@include borderRadius(0);
+	@include fontSize(1.1);
+	cursor:pointer;
+	border:none;
+	padding:$contentPadding $contentPadding*1.5;
+
+	&.btn-bold{
+		font-weight:600;
+	}
+
+	&.btn-sm{
+		padding:$contentPadding*0.75 $contentPadding*1.25;
+	}
+
+	&.btn-xs{
+		padding:$contentPadding*0.5 $contentPadding*0.8;
+	}
+
+	&.btn-border{
+		@include fontSize(1.1);
+		color:$textSpring;
+		border:1px solid rgba(0,0,0,0);
+
+		&.active{
+			border-color:$textSpring;
+		}
+	}
+
+	&.btn-clear{
+		background-color:rgba(0,0,0,0);
+	}
+
+	&.btn-danger{
+		background-color:$bgRed;
+
+		&:hover{
+			background-color:$bgRed2;
+		}
+	}
+
+	&.btn-line{
+		&.active{
+			border-bottom:1px solid $textWhite;
+		}
+
+		&:focus{
+			box-shadow: 0 0 0 3px rgba(255,266,255,.25);
+		}
+	}
+
+	&.btn-olive{
+		background-color:$bgOlive;
+		color:$textWhite;
+
+		&:hover{
+			background-color:$bgOlive2;
+		}
+	}
+
+	&.btn-gray{
+		background-color:$bgGray2;
+		color:$textWhite;
+
+		&:hover{
+			background-color:$bgGray5;
+		}
+	}
+
+	&.btn-spring{
+		background-color:$bgSpring;
+		color:$textOlive;
+
+		&:hover{
+			background-color:$bgSpring3;
+		}
+	}
+
+	&.btn-trans{
+		background-color:rgba(76,76,76,0.75);
+		color:$textWhite;
+
+		&:hover{
+			background-color:rgba(76,76,76,0.9);
+		}
+	}
+
+	&.btn-trans-spring{
+		background-color:rgba(220,232,170,0.80);
+		color:$textWhite;
+
+		&:hover{
+			background-color:rgba(76,76,76,0.9);
+		}
+	}
+}
+
+
+.modal{
+	&.menu-modal{
+		.modal-content{
+			@include borderRadius(0);
+		}
+
+		.modal-header{
+			background-color:$bgOlive;
+			color:$textWhite;
+
+			h2{
+				font-weight:600;
+				margin:0;
+				@include fontSize(1.25);
+			}
+		}
+
+		.modal-body{
+			.container-fluid{
+				padding-top:$contentPadding*1.5;
+				padding-bottom:$contentPadding*1.5;
+			}
+
+			.image{
+				background-color:$bgGray4;
+				height:150px;
+			}
+
+			h3{
+				@include fontSize(1.35);
+				font-weight:600;
+			}
+
+			.form{
+				margin-top:$contentMargin*2;
+
+				select{
+					width:100%;
+				}
+
+				.quantity{
+					input{
+						text-align:center;
+					}
+
+					button{
+						background-color:$bgOlive;
+						color:$textWhite;
+					}
+				}
+			}
+
+			table{
+				margin:0;
+
+				input{
+					text-align:center;
+				}
+			}
+		}
+
+		.modal-footer{
+			text-align:center;
+
+			.btn{
+				margin:$contentMargin 0;
+				white-space: normal;
+				@include fontSize(0.9);
+			}
+		}
+
+
+		.close{
+			text-shadow:none;
+		}
+	}
+
+	&.burger-modal{
+		background-color:rgba(0,0,0,0.8);
+		text-align:center;
+
+		.modal-dialog{
+			width:100%;
+			max-width:100%;
+			margin:$contentMargin 0;
+		}
+
+		.modal-content{
+			@include borderRadius(0);
+			background-color:rgba(0,0,0,0);
+			border:0;
+
+			a{
+				display:block;
+				color:$textWhite;
+				padding:$contentPadding*0.8 $contentPadding;
+
+				&.active{
+					font-weight: 600;
+					background-color:$bgOlive;
+				}
+			}
+
+			ul{
+				margin:$contentMargin 0 0;
+				list-style-type:none;
+				padding:0;
+			}
+		}
+	}
+}
+
+.form-control, .custom-select{
+	background-color:$bgGray8;
+	background-clip:padding-box;
+}
+
+.custom-radio{
+	.custom-control-input{
+		&:checked{
+			& ~ .custom-control-indicator{
+				background-color:$bgOlive;
+			}
+		}
+
+		&:focus{
+			& ~ .custom-control-indicator{
+				box-shadow:none;
+			}
+		}
+
+		&:active{
+			& ~ .custom-control-indicator{
+				background-color:$bgSpring;
+			}
+		}
+	}
+}
+
+.border-olive{
+	border-color:$bgOlive;
+}

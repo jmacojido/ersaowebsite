@@ -1,0 +1,13 @@
+application/cache/*
+application/cache/!index.html
+application/logs/*
+application/logs/!index.html
+application/config/config.php
+application/config/database.php
+application/config/constants.php
+assets/img/*
+404.php
+error_log
+home.php
+layout-styles.css
+adminer.php

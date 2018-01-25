@@ -1,0 +1,65 @@
+.serif{
+	@include serif();
+}
+
+.italic{
+	@include italic();
+}
+
+.lineage{
+	@include fontSize(0);
+}
+
+.liner{
+	@include liner();
+}
+
+.linee{
+	@include linee();
+}
+
+.bg-olive{
+	background-color:$bgOlive;
+}
+
+.bg-spring{
+	background-color:$bgSpring;
+}
+
+.bg-white{
+	background-color:$bgWhite;
+}
+
+.bg-food{
+	background-image: url(/assets/img/bg_noodle.jpg),url(/assets/img/bg_milk_tea.jpg);
+	background-position: left bottom,right bottom;
+	background-size: auto 400px,auto 400px;
+	background-repeat: no-repeat,no-repeat;
+
+	@include media-breakpoint-down(xs){
+		background-image: url(/assets/img/bg_noodle.jpg);
+		background-position: left bottom;
+		background-size: auto 400px;
+		background-repeat: no-repeat;
+	}
+}
+
+.text-olive{
+	color:$textOlive;
+}
+
+.text-spring{
+	color:$textSpring;
+}
+
+.text-low{
+	text-transform:lowercase;
+}
+
+.text-up{
+	text-transform:uppercase;
+}
+
+.text-right{
+	text-align:right;
+}

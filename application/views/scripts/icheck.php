@@ -1,0 +1,1 @@
+<script src="<?php echo JS_URL; ?>icheck.min.js"></script>

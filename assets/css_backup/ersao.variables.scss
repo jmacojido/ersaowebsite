@@ -1,0 +1,65 @@
+$fontSize:16px;
+$fontFamily:'Eras', Arial, Helvetica, sans-serif;
+
+/* COLORS */
+$textBlack:#555;
+$textSpring:#DCE8AA;
+$textSpring2:#E2EDBE;
+$textOlive:#668538;
+$textWhite:#fff;
+
+$dividerBlack:#000;
+$dividerHeight:10px;
+
+
+$bgWhite:#fff;
+$bgOlive:#668538;
+$bgOlive2:#595F42;
+$bgSpring:#DCE8AA;
+$bgSpring2:#9EC23C;
+$bgSpring2Faded:#C6DA83;
+$bgBlack:#000;
+$bgRed:#EB1E24;
+$bgGray:#777;
+$bgGray2:#4C4C4C;
+$bgGray3:#808080;
+$bgGray4:#ddd;
+
+$borderOlive:#668538;
+$borderWhite:#fff;
+
+/* BACKGROUND IMAGES*/
+
+$bgBamboo:url(../img/bamboo_l.jpg), url(../img/bamboo_r.jpg);
+$bgBambooPosition:left center, right center;
+$bgBambooSize: auto 100%, auto 100%;
+$bgBambooRepeat: no-repeat, no-repeat;
+
+
+$bgFood: url(../img/bg_noodle.jpg), url(../img/bg_milk_tea.jpg);
+$bgFoodPosition:left bottom, right bottom;
+$bgFoodSize: auto 400px, auto 400px;
+$bgFoodRepeat: no-repeat, no-repeat;
+
+/* PROMOS */
+
+$bannerHeight:400px;
+
+
+/* EVENTS */
+
+$markerSize:40px;
+
+/* ORDERS */
+
+$categoryListWidth:300px;
+$itemPadding:15px;
+
+@mixin fontSize($percent) {
+	font-size:$percent * $fontSize;
+}
+
+@mixin borderRadius($value){
+	-webkit-border-radius: $value;
+	border-radius: $value;
+}
