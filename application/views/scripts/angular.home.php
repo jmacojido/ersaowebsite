@@ -259,7 +259,7 @@ angular.module('ersao', [])
 	var service = this;
 	var json = "<?php echo addslashes(json_encode($ngData)); ?>";
 
-	service.branches = JSON.parse(json).branches;
+	service.branches = JSON.parse(json).branches_all;
 
 	return service;
 })
