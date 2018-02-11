@@ -1073,49 +1073,70 @@ h1.heading-12 {
 .home-welcome {
 	height: 600px;
 	margin-top:-60px;
-	background-image: url(/assets/img/home/welcome_logo.png), url(/assets/img/home/welcome_bg.jpg);
-	background-position: center, center;
-	background-position-y: 100px, 0px;
-    background-size: auto, auto;
-    background-repeat: no-repeat, no-repeat;
+	background-image: url(/assets/img/home/welcome_bg.jpg);
+	background-position: center;
+	background-position-y: 0px;
+    background-size: auto;
+    background-repeat: no-repeat;
 }
+/* url(/assets/img/home/welcome_logo.png),  */
+.home-welcome-logo{
+	width: 250px;
+    height: 250px;
+    background-color: #fff;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	margin : auto;
+	margin-top : 100px;
+	border-radius: 250px;
+  	box-shadow: 0px 0px 0px 20px rgba(255,255,255,0.5);
+	background-image: url(/assets/img/home/welcome_logo.png);
+	background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
 .home-welcome-buttons{
-	margin-top: 300px;
-    height: 100px;
-
-	text-align: center;
-}
-
-.home-welcome-buttons a{
 	font: Arial;
-	max-width: 100px;
-	font-size: 35px;
-	margin: 50px;
+	min-width: 230px;
+	max-width: 290px;
+	font-size: 17px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 35px;
 	color: #005924;
-	text-shadow:
-		0.5px 0.5px 0 #eaeaea,
-		0.5px -0.5px 0 #eaeaea,
-		-0.5px 0.5px 0 #eaeaea,
-		-0.5px -0.5px 0 #eaeaea,
-		0.5px 0px 0 #eaeaea,
-		0px 0.5px 0 #eaeaea,
-		-0.5px 0px 0 #eaeaea,
-		0px -0.5px 0 #eaeaea;
+	margin-left:auto !important;
+	margin-right:auto !important;
 }
-.home-welcome-buttons a:hover{
-	font: Arial;
-	font-size: 35px;
-	margin: 50px;
-	color: #dd001b;
-	text-shadow:
-		2px 2px 0 #eaeaea,
-		2px -2px 0 #eaeaea,
-		-2px 2px 0 #eaeaea,
-		-2px -2px 0 #eaeaea,
-		2px 2px 0 #eaeaea,
-		2px 2px 0 #eaeaea,
-		-2px 0px 0 #eaeaea,
-		0px -2px 0 #eaeaea;
+.home-welcome-buttons a{
+	color: #005924;
+}
+.home-welcome-buttons-down{
+	font-size: 40px;
+	text-align: center;
+	margin-top: 120px;
+}
+.home-welcome-buttons-down a{
+	color: #fff;
+}
+
+.center-block {
+   text-align: center;
+   margin-top: -150px;
+}
+@media (max-width: 575px) {
+	.center-block {
+	   text-align: center;
+	   margin-top: 40px;
+	   display:block;
+	}
+	.home-welcome-buttons-down{
+		margin-top: 5px;
+	}
 }
 
 .map-box, #map{
