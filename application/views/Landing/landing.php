@@ -729,7 +729,7 @@
 						<select class="form-control custom-select" id="branch" ng-model="c.inBranchIndex" ng-change="c.selectBranch()">
 							<?php
 
-							foreach ( $branches AS $index => $branch ){
+							foreach ( $branches_all AS $index => $branch ){
 								echo '<option value="'.$index.'">';
 								echo $branch->name;
 								echo '</option>';
@@ -837,9 +837,6 @@
 				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgmsntbneeez%2Fposts%2F1480635988658269%3A0&width=auto" width="100%" height="375" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjojomarcelinopogi%2Fposts%2F10208168299875154%3A0&width=auto" width="100%" height="375" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpeachy.diaz%2Fposts%2F10158208405140430%3A0&width=auto" width="100%" height="375" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-				<iframe src="<?php echo IMG_URL; ?>/preview/1.jpg" width="100%" height="375" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-				<iframe src="<?php echo IMG_URL; ?>/preview/2.jpg" width="100%" height="375" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-				<iframe src="<?php echo IMG_URL; ?>/preview/3.jpg" width="100%" height="375" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 			</div>
 		</div>
 	</div>

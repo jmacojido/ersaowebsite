@@ -21,11 +21,15 @@ class Landing extends CI_Controller {
 		$data['meta'] = $meta;
 		$data['angular'] = TRUE;
 
-		$data['branches'] = $this->BranchModel->GetAllBranches();
-		$data['ngData']['branches'] = $data['branches'];
+		$data['branches_all'] = $this->BranchModel->GetAllBranches();
+		$data['ngData']['branches_all'] = $data['branches_all'];
 
 		$data['pageTitle'] = TITLE;
 		$data['pageId'] = 'home';
+
+		$data['areas'] = $this->BranchModel->getAreas();
+		$data['branches'] = $this->BranchModel->getAllBranchesByArea();
+		$data['times'] = $this->BranchModel->getServiceTimes();
 
 		$data['image_carousel'] = $this->MediaModel->get_image_carousel();
 
@@ -35,6 +39,9 @@ class Landing extends CI_Controller {
 		$this->load->view('scripts/owl.landing.php');
 		$this->load->view('scripts/angular.app.php');
 		$this->load->view('scripts/angular.home.php');
+		$this->load->view('scripts/owl.events.php');
+		$this->load->view('scripts/icheck.php');
+		$this->load->view('scripts/icheck.events.php');
 		$this->load->view('scripts/facebook.page.php');
 		$this->load->view('scripts/gmaps.php');
 		$this->load->view('templates/footer.php');

@@ -125,7 +125,7 @@ class ReservationModel extends MY_Model {
 		$dateEnd = date_create_from_format('Y-m-d G:i', $date->format('Y-m-d').' '.$timeEnd);
 
 		$queryStr = "INSERT INTO reservation VALUES(NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, NULL, ?, NOW(), ?, ?, ?)";
-		$queryStr = "INSERT INTO reservation VALUES(NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, NULL, ?, NOW(), ?, ?)";
+		//$queryStr = "INSERT INTO reservation VALUES(NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, NULL, ?, NOW(), ?, ?)";
 
 		$params[] = strtoupper(random_string('alnum', 10));
 		$params[] = 2;
