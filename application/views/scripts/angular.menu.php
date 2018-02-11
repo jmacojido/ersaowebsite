@@ -69,7 +69,7 @@ angular.module('ersao', ['ngStorage'])
 		c.getSizes();
 	}
 
-	
+
 	c.getSizes = function(){
 		var id = c.activeItem.id;
 		var type = c.activeItem.type;
@@ -180,7 +180,7 @@ angular.module('ersao', ['ngStorage'])
 	c.updateQuantity = function(cartItem){
 
 		var change =  parseInt(cartItem.quantity);
-		
+
 		if ( !change ){
 			change = 0;
 		}
@@ -400,7 +400,7 @@ angular.module('ersao', ['ngStorage'])
 
 	c.getEntriesByCategory = function(){
 		c.entries = [];
-		
+
 		c.filteredVariations = c.variations.filter(function(variation){
 			if ( variation.category == c.inCategory ){
 				return true;
@@ -408,7 +408,7 @@ angular.module('ersao', ['ngStorage'])
 
 			return false;
 		});
-		
+
 		var entryIds = [];
 
 		for ( var ctr = 0; ctr < c.filteredVariations.length; ctr++ ){
@@ -689,7 +689,7 @@ angular.module('ersao', ['ngStorage'])
 .factory('Menu', function(){
 	var s = {};
 
-	<?php  
+	<?php
 
 	if ( isset($ngData) == TRUE ){
 

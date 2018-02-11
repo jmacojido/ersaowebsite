@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class OrderModel extends CI_Model {
+class OrderModel extends MY_Model {
 	function __construct(){
 		$this->load->database();
 		$this->db->query("SET time_zone = '+8:00'");

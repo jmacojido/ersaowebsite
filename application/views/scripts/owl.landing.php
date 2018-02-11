@@ -101,12 +101,12 @@ $("a").on('click', function(event) {
   }
 });
 
-$(document).ready(function () {
-	$(document).on('mouseenter', '.home-welcome', function () {
-		$(this).find(".home-welcome-buttons").show(500);
-	}).on('mouseleave', '.home-welcome', function () {
-		$(this).find(".home-welcome-buttons").hide(500);
-	});
-});
+// $(document).ready(function () {
+// 	$(document).on('mouseenter', '.home-welcome', function () {
+// 		$(this).find(".home-welcome-buttons").show(500);
+// 	}).on('mouseleave', '.home-welcome', function () {
+// 		$(this).find(".home-welcome-buttons").hide(500);
+// 	});
+// });
 </script>
 <script src="<?php echo JS_URL; ?>gmaps.js"></script>

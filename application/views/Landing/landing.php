@@ -1,8 +1,18 @@
 <section class="outer-section home-welcome">
-	<div class="home-welcome-buttons" style="display: none;">
-		<a href="#start">ENTER</a><br>
-		<a href="<?=BASE_URL.'events/reservation'?>">Events Reservation</a>
-		<a href="<?=BASE_URL.'order/menu'?>">Order Delivery</a>
+	<div class="row" style="margin-left:0px; margin-right:0px;">
+		<div class = "home-welcome-logo"></div>
+	</div>
+	<div class="row" style="margin-left:0px; margin-right:0px;">
+		<div class="col-md-12 center-block">
+		 	<div class="home-welcome-buttons"><a href="<?=BASE_URL.'events/reservation'?>" >Events Reservation</a></div>
+			<div style="display:inline-block; width: 40%;"></div>
+			<div class="home-welcome-buttons"><a href="<?=BASE_URL.'order/menu'?>">Order Delivery</a></div>
+		</div>
+	</div>
+	<div class="row" style="margin-left:0px; margin-right:0px;">
+		<div class="col-md-12 home-welcome-buttons-down">
+			<div class=""><a href="#start"><i class="fa fa-fw fa-chevron-circle-down"></i></a></div>
+		</div>
 	</div>
 </section>
 <section class="bg-home-welcome-line">

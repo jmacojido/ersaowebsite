@@ -33,6 +33,7 @@ class Landing extends CI_Controller {
 		$this->load->view('Landing/landing.php', $data);
 		$this->load->view('scripts/owl.php');
 		$this->load->view('scripts/owl.landing.php');
+		$this->load->view('scripts/angular.app.php');
 		$this->load->view('scripts/angular.home.php');
 		$this->load->view('scripts/facebook.page.php');
 		$this->load->view('scripts/gmaps.php');
