@@ -1137,6 +1137,9 @@ h1.heading-12 {
 	.home-welcome-buttons-down{
 		margin-top: 5px;
 	}
+	.home-welcome-logo{
+		margin-top: 20px;
+	}
 }
 
 .map-box, #map{
@@ -1761,7 +1764,10 @@ h1.heading-12 {
 
 .menu .categories {
     background-color: #9EC23C;
-    padding: 0
+    padding: 0;
+	position: fixed;
+	z-index: 900;
+	margin-left: 50px;
 }
 
 .menu .categories ul {
@@ -1789,7 +1795,16 @@ h1.heading-12 {
 
 .menu .entries {
     padding-top: 15px;
-    padding-bottom: 15px
+    padding-bottom: 15px;
+	margin-left: 350px;
+}
+@media (max-width: 575px) {
+	.menu .categories {
+	   margin-left: 0px;
+	}
+	.menu .entries{
+		margin-left: 0px;
+	}
 }
 
 .menu .entries .row {

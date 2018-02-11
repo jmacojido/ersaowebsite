@@ -56,8 +56,8 @@ $(document).ready(function(){
 		loop: false,
 		nav: true,
 		navText:[
-			'<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-			'<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+			'<i class="fa fa-chevron-left" aria-hidden="true" style="margin-top:-100px;"></i>',
+			'<i class="fa fa-chevron-right" style="margin-top:-100px;" aria-hidden="true"></i>'
 		],
 		margin:20,
 		stagePadding:0,

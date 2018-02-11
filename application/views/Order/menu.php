@@ -1,7 +1,7 @@
 <section class="outer-section menu" ng-controller="MenuController as c">
 	<div class="container">
 		<div class="row align-items-start">
-			<div class="d-block d-lg-none col categories divided">
+			<div class="d-block d-lg-none col categories divided" id="myAffix">
 				<div class="form container-fluid">
 					<div class="row">
 						<div class="col">
@@ -136,7 +136,7 @@
 							</div>
 							<div class="col-12 col-sm-auto">
 								<button type="button" class="btn btn-danger btn-block text-up" ng-click="c.addItemCheckout()" data-dismiss="modal">Add to cart and check out</button>
-							</div> 
+							</div>
 						</div>
 					</div>
 				</div>

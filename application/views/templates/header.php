@@ -342,6 +342,8 @@
 			}
 
 		});
+
+
 	});
 <?php }
 else if($this->uri->segment(1) == "promos" || $this->uri->segment(1) == "events" || $this->uri->segment(1) == "order"){ ?>
